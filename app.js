@@ -43,5 +43,10 @@ app.get('/:url', function (req, res) {
     buscar_video("https://www.youtube.com/watch?v="+req.params.url,nam)
     res.send(__dirname+"/"+nam+".mp3")
 })
+
+app.get('*', function (req, res) {
+    console.log("NO entro nada")
+    res.send(__dirname)
+})
   
 app.listen(8080)
