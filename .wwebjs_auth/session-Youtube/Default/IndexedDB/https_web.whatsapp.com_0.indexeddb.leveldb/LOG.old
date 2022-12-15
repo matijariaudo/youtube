@@ -1,0 +1,14 @@
+2022/12/15-01:03:13.879 11d8c Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/12/15-01:03:13.880 11d8c Recovering log #224
+2022/12/15-01:03:14.122 11d8c Reusing old log C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000224.log 
+2022/12/15-01:03:24.908 16c78 Level-0 table #230: started
+2022/12/15-01:03:24.975 16c78 Level-0 table #230: 1296908 bytes OK
+2022/12/15-01:03:25.045 16c78 Delete type=0 #224
+2022/12/15-01:03:25.687 13020 Compacting 1@1 + 2@2 files
+2022/12/15-01:03:25.947 13020 Generated table #231@1: 41431 keys, 2271431 bytes
+2022/12/15-01:03:26.152 13020 Generated table #232@1: 30790 keys, 1328188 bytes
+2022/12/15-01:03:26.152 13020 Compacted 1@1 + 2@2 files => 3599619 bytes
+2022/12/15-01:03:26.155 13020 compacted to: files[ 0 0 2 0 0 0 0 ]
+2022/12/15-01:03:26.155 13020 Delete type=2 #226
+2022/12/15-01:03:26.155 13020 Delete type=2 #227
+2022/12/15-01:03:26.155 13020 Delete type=2 #230

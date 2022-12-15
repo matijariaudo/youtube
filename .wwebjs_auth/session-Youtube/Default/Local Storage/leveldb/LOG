@@ -1,0 +1,6 @@
+2022/12/15-01:04:48.893 165c4 Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\Local Storage\leveldb/MANIFEST-000001
+2022/12/15-01:04:48.893 165c4 Recovering log #3
+2022/12/15-01:04:48.894 165c4 Reusing old log C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\Local Storage\leveldb/000003.log 
+2022/12/15-01:12:49.345 120f8 Level-0 table #5: started
+2022/12/15-01:12:49.377 120f8 Level-0 table #5: 25801 bytes OK
+2022/12/15-01:12:49.389 120f8 Delete type=0 #3
