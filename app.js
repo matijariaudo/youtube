@@ -18,6 +18,6 @@ app.get('*', function (req, res) {
 console.log("App corriendo en ",process.env.PORT)
 app.listen(process.env.PORT)
 
-setTimeout(() => {
+setInterval(() => {
     console.log("Matias "+new Date())
 }, 1000);
