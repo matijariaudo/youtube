@@ -16,3 +16,4 @@ app.get('*', function (req, res) {
     res.json(qri)
 });
 app.listen(process.env.PORT)
+console.log("app corriendo en ",process.env.PORT)
