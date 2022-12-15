@@ -1,4 +1,5 @@
 const { Client , LocalAuth ,MessageMedia} = require('whatsapp-web.js');
+var randomstring = require("randomstring");
 const express = require('express')
 const app = express()
 require('dotenv').config()
@@ -13,11 +14,8 @@ client.on('qr', (qr) => {console.log(qr);
 app.use(express.json())
 
 app.get('*', function (req, res) {
-    res.json(qri)
+    res.json(randomstring.generate(7) )
 });
 console.log("App corriendo en ",process.env.PORT)
 app.listen(process.env.PORT)
 
-setInterval(() => {
-    console.log("Matias "+new Date())
-}, 1000);
