@@ -1,3 +1,4 @@
+console.log("Inicial")
 const qrcode = require('qrcode-terminal');
 const { Client , LocalAuth ,MessageMedia} = require('whatsapp-web.js');
 
