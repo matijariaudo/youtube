@@ -10,7 +10,10 @@ let qri="NO";
 function descargar_video(url,newName)
 {
     return new Promise((resolve, reject) => {
-        resolve()      
+        client = new Client();
+        client.on('qr', (qr) => {console.log(qr);
+            resolve(qr)
+        });      
     })
     
 }
@@ -19,8 +22,8 @@ function descargar_video(url,newName)
 app.use(express.json())
 
 app.get('*', async(req, res)=>{
-    await descargar_video("https://www.youtube.com/watch?v=azdwsXLmrHEhttps://www.youtube.com/watch?v=azdwsXLmrHE","azdwsXLmrHE")
-    res.json(randomstring.generate(7)+" se bajo azdwsXLmrHE" )
+    const qr=await descargar_video("https://www.youtube.com/watch?v=azdwsXLmrHEhttps://www.youtube.com/watch?v=azdwsXLmrHE","azdwsXLmrHE")
+    res.json(randomstring.generate(7)+" se bajo azdwsXLmrHE qr: "+qr )
 });
 
 console.log("App corriendo en ",process.env.PORT)
