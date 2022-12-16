@@ -8,7 +8,12 @@ const app = express()
 
 console.clear()
 let qrcode="NO QR"
-const client = new Client({puppeteer:['--no-sandbox']});
+const client = new Client({
+    puppeteer: {
+        headless: true,
+        args: ['--no-sandbox']
+    }
+});
 client.on('qr', (qr) => {console.log('QR RECEIVED', qr);qrcode=qr;});
 client.on('ready', () => {console.log('Client is ready!');});
 client.initialize()
