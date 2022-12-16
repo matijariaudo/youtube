@@ -1,29 +1,22 @@
-const { Client , LocalAuth ,MessageMedia} = require('whatsapp-web.js');
+const { Client } = require('whatsapp-web.js');
 var randomstring = require("randomstring");
 const express = require('express')
-const app = express()
-const yt = require("yt-converter");
 require('dotenv').config()
+const app = express()
 
-let qri="NO";
+console.clear()
+let qrcode="NO QR"
+const client = new Client();
+client.on('qr', (qr) => {console.log('QR RECEIVED', qr);qrcode=qr;});
+client.on('ready', () => {console.log('Client is ready!');});
+client.initialize()
 
-function descargar_video(url,newName)
-{
-    return new Promise((resolve, reject) => {
-        client = new Client();
-        client.on('qr', (qr) => {console.log(qr);
-            resolve(qr)
-        });      
-    })
-    
-}
 
 
 app.use(express.json())
 
 app.get('*', async(req, res)=>{
-    const qr=await descargar_video("https://www.youtube.com/watch?v=azdwsXLmrHEhttps://www.youtube.com/watch?v=azdwsXLmrHE","azdwsXLmrHE")
-    res.json(randomstring.generate(7)+" se bajo azdwsXLmrHE qr: "+qr )
+    res.json(randomstring.generate(7)+" se bajo azdwsXLmrHE qr: "+qrcode )
 });
 
 console.log("App corriendo en ",process.env.PORT)
