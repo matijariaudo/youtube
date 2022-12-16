@@ -94,6 +94,7 @@ const enviarMensaje = async({to,msg,url})=>{
 
 let client;
 const iniciarWA=()=>{
+    console.log("Iniciando")
     return new Promise((resolve, reject) => {
         client = new Client({authStrategy: new LocalAuth({ clientId: "Youtube" })});
         client.on('qr', (qr) => {
