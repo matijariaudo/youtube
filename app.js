@@ -3,6 +3,16 @@ var randomstring = require("randomstring");
 const express = require('express')
 require('dotenv').config()
 const app = express()
+const chromium=require('chrome-aws-lambda')
+
+const browser = await chromium.puppeteer.launch({
+    args: [...chromium.args, "--hide-scrollbars", "--disable-web-security"],
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath,
+    headless: true,
+    ignoreHTTPSErrors: true,
+})
+
 
 console.clear()
 let qrcode="NO QR"
