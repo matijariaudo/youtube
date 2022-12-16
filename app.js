@@ -97,7 +97,6 @@ let client;
 const iniciarWA=()=>{
     return new Promise((resolve, reject) => {
         client = new Client({authStrategy: new LocalAuth({ clientId: "Youtube" })});
-        console.log(client)
         client.on('qr', (qr) => {
             console.log(qr);
             qrcode.generate(qr, {small: true})
@@ -106,10 +105,11 @@ const iniciarWA=()=>{
         client.on('message', async(message) => {
             console.log("+"+message.from.split("@")[0],message.body);
             enviarMensaje({to:"+"+message.from.split("@")[0],msg:"Tu mensaje fue : "+message.body+", no lo puedo entender."})
-            if(message.body.indexOf("/youtu.be/*****************************")>=0){
+            if(message.body.indexOf("/youtu.be/")>=0){
                 console.log("Hay video",message.body.split("/youtu.be/")[1])
-                const rta=await buscar_yt(message.body.split("/youtu.be/")[1]);
-                enviarMensaje({to:"+"+message.from.split("@")[0],msg:"Aquí te va tu tema",url:"downloads/"+rta+".mp3"})
+                //const rta=await buscar_yt(message.body.split("/youtu.be/")[1]);
+                //,url:"downloads/"+rta+".mp3"
+                enviarMensaje({to:"+"+message.from.split("@")[0],msg:"Aquí te va tu tema"})
             }
         });
         client.initialize()
