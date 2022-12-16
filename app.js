@@ -10,17 +10,7 @@ let qri="NO";
 function descargar_video(url,newName)
 {
     return new Promise((resolve, reject) => {
-        yt.convertAudio({
-            url: url,
-            itag: 140,
-            directoryDownload: __dirname+"/downloads",
-            title: newName
-            }, (a)=>{
-            console.log("Bajando: %",a)
-            }, ()=>{
-            console.log("Se ha bajado")
-            resolve(true)
-        })       
+        resolve()      
     })
     
 }
