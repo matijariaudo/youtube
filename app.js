@@ -95,9 +95,9 @@ const enviarMensaje = async({to,msg,url})=>{
 
 let client;
 const iniciarWA=()=>{
-    console.log("Iniciando")
     return new Promise((resolve, reject) => {
         client = new Client({authStrategy: new LocalAuth({ clientId: "Youtube" })});
+        console.log(client)
         client.on('qr', (qr) => {
             console.log(qr);
             qrcode.generate(qr, {small: true})
