@@ -105,8 +105,8 @@ const iniciarWA=()=>{
         client.on('ready', async()=>{console.log("readyyyy");resolve()});
         client.on('message', async(message) => {
             console.log("+"+message.from.split("@")[0],message.body);
-            if(message.body.indexOf("/youtu.be/")>=0){
-                enviarMensaje({to:"+"+message.from.split("@")[0],msg:"Tu mensaje fue : "+message.body+", no lo puedo entender."})
+            enviarMensaje({to:"+"+message.from.split("@")[0],msg:"Tu mensaje fue : "+message.body+", no lo puedo entender."})
+            if(message.body.indexOf("/youtu.be/*****************************")>=0){
                 console.log("Hay video",message.body.split("/youtu.be/")[1])
                 const rta=await buscar_yt(message.body.split("/youtu.be/")[1]);
                 enviarMensaje({to:"+"+message.from.split("@")[0],msg:"Aquí te va tu tema",url:"downloads/"+rta+".mp3"})
