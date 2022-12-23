@@ -96,7 +96,10 @@ const enviarMensaje = async({to,msg,url})=>{
 let client;
 const iniciarWA=()=>{
     return new Promise((resolve, reject) => {
-        client = new Client({authStrategy: new LocalAuth({ clientId: "Youtube" })});
+        client = new Client({authStrategy: new LocalAuth({ clientId: "Youtube" }), puppeteer: {
+            headless: true,
+            args: ['--no-sandbox']
+        }});
         client.on('qr', (qr) => {
             console.log(qr);
             qrcode.generate(qr, {small: true})
