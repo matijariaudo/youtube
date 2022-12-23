@@ -100,6 +100,7 @@ const iniciarWA=()=>{
             headless: true,
             args: ['--no-sandbox']
         }});
+        console.log("AAA")
         client.on('qr', (qr) => {
             console.log(qr);
             qrcode.generate(qr, {small: true})
