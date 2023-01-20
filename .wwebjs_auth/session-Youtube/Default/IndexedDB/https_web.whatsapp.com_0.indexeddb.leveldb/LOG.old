@@ -1,6 +1,6 @@
-2023/01/20-11:16:37.399 1b48 Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/01/20-11:16:37.400 1b48 Recovering log #26
-2023/01/20-11:16:37.410 1b48 Reusing old log C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000026.log 
-2023/01/20-11:16:37.411 1b48 Delete type=2 #23
-2023/01/20-11:16:37.411 1b48 Delete type=2 #24
-2023/01/20-11:16:37.411 1b48 Delete type=2 #27
+2023/01/20-17:23:49.411 2f84 Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/01/20-17:23:49.411 2f84 Recovering log #46
+2023/01/20-17:23:49.578 2f84 Reusing old log C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000046.log 
+2023/01/20-17:24:01.545 548c Level-0 table #52: started
+2023/01/20-17:24:01.664 548c Level-0 table #52: 1228943 bytes OK
+2023/01/20-17:24:01.667 548c Delete type=0 #46

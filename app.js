@@ -1,41 +1,9 @@
 console.log("Inicial")
 const qrcode = require('qrcode-terminal');
 const { Client , LocalAuth ,MessageMedia} = require('whatsapp-web.js');
-const yt = require("yt-converter");
 const express = require('express')
-
 const app = express()
 require('dotenv').config()
-
-function buscar_video(url)
-{
-    return new Promise((resolve, reject) => {
-        yt.getInfo(url).then(info => {
-        resolve(info)
-        }).catch(e=>{
-        resolve()
-        });    
-    })
-    
-}
-
-function descargar_video(url,newName)
-{
-    return new Promise((resolve, reject) => {
-        yt.convertAudio({
-            url: url,
-            itag: 140,
-            directoryDownload: __dirname+"/downloads",
-            title: newName
-            }, (a)=>{
-            console.log("Bajando: %",a)
-            }, ()=>{
-            console.log("Se ha bajado")
-            resolve(true)
-        })       
-    })
-    
-}
 
 function fecha(fc){
     fc=new Date(fc);
@@ -51,16 +19,15 @@ console.clear()
 
 app.use(express.json())
 
-app.get('/:url', async(req, res)=>{
-    nam="a"+fecha(new Date());
-    cod=req.params.url;
-    data=await buscar_video("https://www.youtube.com/watch?v="+cod)
-    if(!data){
-        return res.status(200).json({"error":"No es un video"})
+app.get('/:nro', async(req, res)=>{
+    const {nro}=req.params;
+    const {to,msg,url}=req.body;
+    console.log(nro,to,msg,url)
+    if(!wsp_init){
+        return res.status(200).json({"error":"Aún no se ha iniciado sesión el wsp"});
     }else{
-        console.log(req.params.url)
-        await descargar_video("https://www.youtube.com/watch?v="+cod,nam)
-        return res.status(200).json({"error":"Se ha descargado"})
+        enviarMensaje({to,msg})
+        return res.status(200).json({"error":"Enviando el wsp"});
     }
 })
 
@@ -69,22 +36,11 @@ app.get('*', function (req, res) {
     res.send(__dirname)
 })
 
-const buscar_yt=async(cod)=>{
-    nam="yt - "+fecha(new Date());
-    data=await buscar_video("https://www.youtube.com/watch?v="+cod)
-    if(!data){
-        return "NO"
-    }else{
-        console.log(data.title)
-        await descargar_video("https://www.youtube.com/watch?v="+cod,cod)
-        return cod;
-    }
-}
 
 const enviarMensaje = async({to,msg,url})=>{
-    const number = to;
     const text = msg;
-    const chatId = number.substring(1) + "@c.us";
+    const chatId = to.substring(1) + "@c.us";
+    console.log(client)
     client.sendMessage(chatId, text);
     if(url){
         const media=await MessageMedia.fromFilePath(url)
@@ -93,6 +49,7 @@ const enviarMensaje = async({to,msg,url})=>{
 }
 
 let client;
+let wsp_init=false;
 const iniciarWA=()=>{
     return new Promise((resolve, reject) => {
         console.log("Iniciando wsp..")
@@ -104,14 +61,9 @@ const iniciarWA=()=>{
             console.log(qr);
             qrcode.generate(qr, {small: true})
         });
-        client.on('ready', async()=>{console.log("readyyyy");resolve()});
+        client.on('ready', async()=>{console.log("readyyyy");wsp_init=true;resolve()});
         client.on('message', async(message) => {
-            console.log("+"+message.from.split("@")[0],message.body);
             enviarMensaje({to:"+"+message.from.split("@")[0],msg:"Tu mensaje fue : "+message.body+", no lo puedo entender."})
-            if(message.body.indexOf("/youtu.be/")>=0){
-                const rta=await buscar_yt(message.body.split("/youtu.be/")[1]);
-                enviarMensaje({to:"+"+message.from.split("@")[0],msg:"Aquí te va tu tema",url:"downloads/"+rta+".mp3"})
-            }
         });
         client.initialize()
     })

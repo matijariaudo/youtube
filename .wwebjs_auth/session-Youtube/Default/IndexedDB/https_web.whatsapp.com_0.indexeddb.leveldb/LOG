@@ -1,3 +1,12 @@
-2023/01/20-11:30:14.641 374 Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/01/20-11:30:14.642 374 Recovering log #26
-2023/01/20-11:30:14.822 374 Reusing old log C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000026.log 
+2023/01/20-17:24:02.730 1c84 Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/01/20-17:24:02.730 1c84 Recovering log #51
+2023/01/20-17:24:02.743 1c84 Reusing old log C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000051.log 
+2023/01/20-17:24:04.216 1c84 Compacting 1@1 + 2@2 files
+2023/01/20-17:24:04.333 1c84 Generated table #54@1: 40116 keys, 2266819 bytes
+2023/01/20-17:24:04.429 1c84 Generated table #55@1: 40160 keys, 2199820 bytes
+2023/01/20-17:24:04.441 1c84 Generated table #56@1: 7433 keys, 155604 bytes
+2023/01/20-17:24:04.441 1c84 Compacted 1@1 + 2@2 files => 4622243 bytes
+2023/01/20-17:24:04.444 1c84 compacted to: files[ 0 0 3 0 0 0 0 ]
+2023/01/20-17:24:04.445 1c84 Delete type=2 #48
+2023/01/20-17:24:04.445 1c84 Delete type=2 #49
+2023/01/20-17:24:04.445 1c84 Delete type=2 #52
