@@ -119,9 +119,9 @@ const iniciarWA=()=>{
 
 const init=async()=>{
 console.clear()
-await iniciarWA()
 app.listen(process.env.PORT)
 console.log("Listen ",process.env.PORT)
+await iniciarWA()
 }
 
 init()
