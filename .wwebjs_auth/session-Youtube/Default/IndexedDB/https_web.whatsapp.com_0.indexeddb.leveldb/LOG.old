@@ -1,34 +1,6 @@
-2023/01/18-16:34:46.594 3fdc Creating DB C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
-2023/01/18-16:34:46.609 3fdc Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/01/18-16:34:46.645 3c94 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
-2023/01/18-16:34:57.959 2e5c Level-0 table #5: started
-2023/01/18-16:34:58.002 2e5c Level-0 table #5: 1100830 bytes OK
-2023/01/18-16:34:58.010 2e5c Delete type=0 #3
-2023/01/18-16:35:06.353 4e54 Level-0 table #7: started
-2023/01/18-16:35:06.390 4e54 Level-0 table #7: 1394008 bytes OK
-2023/01/18-16:35:06.395 4e54 Delete type=0 #4
-2023/01/18-16:35:06.400 4e54 Compacting 1@1 + 1@2 files
-2023/01/18-16:35:06.505 4e54 Generated table #8@1: 23852 keys, 1462760 bytes
-2023/01/18-16:35:06.505 4e54 Compacted 1@1 + 1@2 files => 1462760 bytes
-2023/01/18-16:35:06.509 4e54 compacted to: files[ 0 0 1 0 0 0 0 ]
-2023/01/18-16:35:18.275 3c94 Level-0 table #10: started
-2023/01/18-16:35:18.310 3c94 Level-0 table #10: 1149470 bytes OK
-2023/01/18-16:35:18.314 3c94 Delete type=2 #5
-2023/01/18-16:35:18.314 3c94 Delete type=0 #6
-2023/01/18-16:35:18.314 3c94 Delete type=2 #7
-2023/01/18-16:35:19.518 3c94 Compacting 1@1 + 1@2 files
-2023/01/18-16:35:19.600 3c94 Generated table #11@1: 32607 keys, 2104934 bytes
-2023/01/18-16:35:19.600 3c94 Compacted 1@1 + 1@2 files => 2104934 bytes
-2023/01/18-16:35:19.602 3c94 compacted to: files[ 0 0 1 0 0 0 0 ]
-2023/01/18-16:35:38.060 429c Level-0 table #13: started
-2023/01/18-16:35:38.089 429c Level-0 table #13: 1048603 bytes OK
-2023/01/18-16:35:38.096 429c Delete type=2 #8
-2023/01/18-16:35:38.096 429c Delete type=0 #9
-2023/01/18-16:35:38.096 429c Delete type=2 #10
-2023/01/18-16:35:38.107 2e5c Compacting 1@1 + 1@2 files
-2023/01/18-16:35:38.192 2e5c Generated table #14@1: 30654 keys, 2208779 bytes
-2023/01/18-16:35:38.221 2e5c Generated table #15@1: 17820 keys, 367100 bytes
-2023/01/18-16:35:38.221 2e5c Compacted 1@1 + 1@2 files => 2575879 bytes
-2023/01/18-16:35:38.224 2e5c compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/01/18-16:35:38.224 2e5c Delete type=2 #11
-2023/01/18-16:35:38.224 2e5c Delete type=2 #13
+2023/01/20-11:16:37.399 1b48 Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/01/20-11:16:37.400 1b48 Recovering log #26
+2023/01/20-11:16:37.410 1b48 Reusing old log C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000026.log 
+2023/01/20-11:16:37.411 1b48 Delete type=2 #23
+2023/01/20-11:16:37.411 1b48 Delete type=2 #24
+2023/01/20-11:16:37.411 1b48 Delete type=2 #27

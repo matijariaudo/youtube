@@ -56,7 +56,7 @@ app.get('/:url', async(req, res)=>{
     cod=req.params.url;
     data=await buscar_video("https://www.youtube.com/watch?v="+cod)
     if(!data){
-        return res.status(200).json({"error":"Ha ocurrido un error"})
+        return res.status(200).json({"error":"No es un video"})
     }else{
         console.log(req.params.url)
         await descargar_video("https://www.youtube.com/watch?v="+cod,nam)
