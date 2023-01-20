@@ -1,1 +1,5 @@
-[1222/235258.835:INFO:CONSOLE(7)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/vendor1~app.ae7c9071ac6bdfd06f8e.js (7)
+[0118/171718.157:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
+[0118/171718.165:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
+[0118/215312.043:WARNING:dns_config_service_win.cc(509)] Failed to read DnsConfig.
+[0119/083904.010:WARNING:dns_config_service_win.cc(509)] Failed to read DnsConfig.
+[0119/083904.136:WARNING:dns_config_service_win.cc(509)] Failed to read DnsConfig.

@@ -1,7 +1,6 @@
 console.log("Inicial")
 const qrcode = require('qrcode-terminal');
 const { Client , LocalAuth ,MessageMedia} = require('whatsapp-web.js');
-
 const yt = require("yt-converter");
 const express = require('express')
 
@@ -96,11 +95,11 @@ const enviarMensaje = async({to,msg,url})=>{
 let client;
 const iniciarWA=()=>{
     return new Promise((resolve, reject) => {
+        console.log("Iniciando wsp..")
         client = new Client({authStrategy: new LocalAuth({ clientId: "Youtube" }), puppeteer: {
             headless: true,
             args: ['--no-sandbox']
         }});
-        console.log("AAA")
         client.on('qr', (qr) => {
             console.log(qr);
             qrcode.generate(qr, {small: true})

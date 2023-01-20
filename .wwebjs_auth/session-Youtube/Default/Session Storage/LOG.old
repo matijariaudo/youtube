@@ -1,3 +1,2 @@
-2022/12/22-23:46:49.231 1ce94 Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\Session Storage/MANIFEST-000001
-2022/12/22-23:46:49.315 1ce94 Recovering log #3
-2022/12/22-23:46:49.316 1ce94 Reusing old log C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\Session Storage/000003.log 
+2023/01/18-16:34:45.694 4788 Creating DB C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\Session Storage since it was missing.
+2023/01/18-16:34:45.722 4788 Reusing MANIFEST C:\Users\mati_\Documents\node\Curso\youtube\.wwebjs_auth\session-Youtube\Default\Session Storage/MANIFEST-000001
